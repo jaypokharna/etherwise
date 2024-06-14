@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "react-alice-carousel/lib/alice-carousel.css";
+
+#root {
+    scroll-snap-type: y proximity;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+:root {
+  /* font-family: "Mona Sans", cursive; */
+
+  font-family: 'Roboto'; /* Default font family */
+
+  --gradient: linear-gradient(to bottom right, #3A9BDC, #1260CC);
+  --primary: #3A9BDC;
+  --dark: #0E1223;
+  --grey: #F4F7FF;
+  
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.input-basics {
+    @apply border-2 p-2 w-full;
+}
+
+
+.responsive-container {
+    @apply mx-auto px-6 w-full h-full
+    xl:w-[90%] xl:px-0
+}
+
+.linear-trans {
+    transition: 0.3s linear;
+}
+
+.ease-trans {
+    transition: 0.3s ease-in-out;
+}
+
+.gradient-bg {
+    background-image: linear-gradient(to bottom right, #3A9BDC, #1260CC);
+}
+
+.font-stretched {
+    font-stretch: 300%;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-container--fit {
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+}
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+  .slick-slide > div {
+    margin: 0 10px;
+    height: 100%;
+  }
+
+  .slick-dots
+{
+    bottom: -40px;
+}
+
+.slick-next
+{
+    right: -30px;
+}
+
+.slick-prev
+{
+    left: -30px;
+}
