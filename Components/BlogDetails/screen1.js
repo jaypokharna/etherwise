@@ -25,15 +25,13 @@ const Screen1 = ({ blogName }) => {
   const blog_details = useBlogsData();
   const currentBlog = blog_details[0].cards.find(blog => blog.heading === blogName)
 
+  let data
 
-  let data = useBlog1();
-
-
-  switch (currentBlog.blogNumber) {
+  switch (currentBlog?.blogNumber) {
     case 1:
-      data = useBlog1();
-      break;
-  case 2:
+    data = useBlog1();
+    break;
+    case 2:
     data = useBlog2();
     break;
     case 3:
@@ -43,54 +41,104 @@ const Screen1 = ({ blogName }) => {
     data = useBlog4();
     break;
     default:
-      break;
+    break;
   }
+
+  // const fetchComments = async (blogName) => {
+  //   try {
+  //     const result = await fetch((`/api/comments`))
+  //     // const result = await fetch(`http://localhost:5000/fetchComments/blockchain`)
+
+  //     const comments = await result.json();
+  //     console.log(comments)
+  //     setComments(comments);
+
+  //   } catch (error) {
+  //     console.log("Error - ", error.message)
+  //   }
+  // }
 
   const fetchComments = async (blogName) => {
     try {
-      const result = await fetch((`http://localhost:5000/fetchComments/${blogName}`))
-      // const result = await fetch(`http://localhost:5000/fetchComments/blockchain`)
+      const blogN = decodeURIComponent(blogName);
 
+      const result = await fetch(`/api/comments?blogName=${blogN}`)
       const comments = await result.json();
-      setComments(comments);
+          console.log("comments - ",comments)
+          setComments(comments);
+      
 
     } catch (error) {
       console.log("Error - ", error.message)
     }
   }
+
+  // const addComment = async (blogName, comment, author, email) => {
+  //   try {
+  //     const content = comment;
+  //     const result = await fetch(`/api/addComment`, {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       },
+  //       body: JSON.stringify({ blogName, content, author, email })
+  //     })
+
+  //     setAuthor("")
+  //     setEmail("")
+  //     setComment("")
+  //     const comments = await result.json();
+  //     fetchComments(blogName)
+
+  //   } catch (error) {
+  //     console.log("Error - ", error.message)
+  //   }
+  // }
 
   const addComment = async (blogName, comment, author, email) => {
     try {
+      const blogN = decodeURIComponent(blogName);
       const content = comment;
-      const result = await fetch(`http://localhost:5000/addComment`, {
-        method: "POST",
+      const response = await fetch(`/api/addComments?blogName=${blogN}`, {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json"
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ blogName, content, author, email })
-      })
+        body: JSON.stringify({ blogName : blogN , content, author, email }),
+      });
 
-      setAuthor("")
-      setEmail("")
-      setComment("")
-      const comments = await result.json();
-      fetchComments(blogName)
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
 
+      const result = await response.json();
+
+      if (response.ok) {
+        alert('Comment added successfully');
+        setComment('');
+      } else {
+        alert('Failed to add comment');
+      }
     } catch (error) {
-      console.log("Error - ", error.message)
+      console.error('Error adding comment:', error);
+      alert('An error occurred');
     }
   }
 
+
+
+
   useEffect(() => {
 
-    fetchComments(blogName);
+  const result = fetchComments(blogName);
+ 
+  console.log('Fetch - ',fetchedComments)
 
   }, [])
 
   // Log comments whenever it updates
   useEffect(() => {
   }, [fetchedComments]);
-
 
   const initialItems = 5;
   const [visibleItems, setVisibleItems] = useState(initialItems);
@@ -104,11 +152,6 @@ const Screen1 = ({ blogName }) => {
   const showLess = () => {
     setVisibleItems(5);
   };
-
-  const filterComments = () => {
-
-  }
-
 
   const scrollToElement = (id) => {
     const element = document.getElementById(id);
@@ -245,14 +288,15 @@ const Screen1 = ({ blogName }) => {
           {/* <div className=' flex flex-col gap-3 w-[80%] h-[70%] rounded-xl p-4 border-2 border-black border-opacity-25 overflow-scroll'> */}
           <div className=' flex flex-col gap-3 w-[80%] h-fit overflow-x-hidden rounded-xl p-4 '>
 
-            {fetchedComments?.slice(0, visibleItems).map((item, i) => {
+            {/* {fetchedComments?.slice(0, visibleItems).map((item, i) => { */}
+            {fetchedComments?.map((item, i) => {
               return (
                 <div key={i} className=' flex flex-col gap-2 mb-2'>
 
                   <div className='flex items-center gap-3'>
                     <img src={`https://avatar.iran.liara.run/username?username=${item.author}`} alt="" className='h-8' />
-                    <h1 className='text-lg font-semibold'>{item.author}</h1>
-                    <h1>{formatDistanceToNow(parseISO(item.date), { addSuffix: true })}</h1>
+                    <h1 className='text-lg font-semibold'>{item?.author}</h1>
+                    <h1>{formatDistanceToNow(parseISO(item?.date), { addSuffix: true })}</h1>
                   </div>
                   <p>{item.content}</p>
 
