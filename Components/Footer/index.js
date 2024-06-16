@@ -70,7 +70,7 @@ export default function Footer() {
     <footer
       className="
        w-full
-       pt-14 lg:py-14   lg:h-[88vh] 
+       pt-14 lg:py-14 lg:h-[88vh]  mt-[4%]
       "
     >
          <div

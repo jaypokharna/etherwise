@@ -64,7 +64,6 @@ const Screen1 = ({ blogName }) => {
 
       const result = await fetch(`/api/comments?blogName=${blogN}`)
       const comments = await result.json();
-          console.log("comments - ",comments)
           setComments(comments);
       
 
@@ -111,10 +110,14 @@ const Screen1 = ({ blogName }) => {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
 
-      const result = await response.json();
+      setAuthor("")
+      setEmail("")
+      setComment("")
+      await response.json();
+      fetchComments(blogN)
+      
 
       if (response.ok) {
-        alert('Comment added successfully');
         setComment('');
       } else {
         alert('Failed to add comment');
@@ -131,13 +134,14 @@ const Screen1 = ({ blogName }) => {
   useEffect(() => {
 
   const result = fetchComments(blogName);
- 
-  console.log('Fetch - ',fetchedComments)
 
   }, [])
 
   // Log comments whenever it updates
   useEffect(() => {
+
+    console.log(fetchedComments)
+
   }, [fetchedComments]);
 
   const initialItems = 5;
@@ -157,11 +161,16 @@ const Screen1 = ({ blogName }) => {
     const element = document.getElementById(id);
     const offset = element.offsetTop - 20;
     window.scrollTo({
-      top: offset,
+      top: offset, 
       behavior: 'smooth'
     });
   };
 
+  const filterComments = ()=>{
+
+
+
+  }
 
   return (
     <div className='w-full h-fit  flex flex-col items-center relative top-20 overflow-x-hidden'>
@@ -235,7 +244,7 @@ const Screen1 = ({ blogName }) => {
       </div>
 
       {/* Comments writing Section */}
-      <div className='w-[100vw] h-fit  py-6 px-4 flex justify-evenly'>
+      <div className='w-[100vw] h-fit  py-6 px-4 flex justify-evenly bg-[#F4F7FF]'>
 
         <div className=' w-[25%] h-fit p-4 pt-8 flex flex-col items-center justify-center'>
 
@@ -273,7 +282,10 @@ const Screen1 = ({ blogName }) => {
               setFilterSelected(1)
               filterComments(filterSelected)
             }}>Newest</h1>
-            <h1 className={`cursor-pointer hover:font-bold ${filterSelected == 2 ? 'underline font-bold' : 'no-underline font-sans'}`} onClick={() => { setFilterSelected(2) }}>Oldest</h1>
+            <h1 className={`cursor-pointer hover:font-bold ${filterSelected == 2 ? 'underline font-bold' : 'no-underline font-sans'}`} onClick={() => { 
+              setFilterSelected(2) 
+              filterComments(filterSelected)
+              }}>Oldest</h1>
           </div>
 
           <div className='flex flex-col w-full h-[35%] gap-0 rounded-xl relative'>
@@ -282,23 +294,23 @@ const Screen1 = ({ blogName }) => {
               <img src={EtherwiseIcon} alt="" className='h-4 opacity-50' />
             </div>
             <textarea type="text" name="" id="" value={comment} onChange={(e) => { setComment(e.target.value) }} placeholder='Enter your review.' className='w-full h-full border-2 border-blue-900 border-opacity-45 rounded-3xl font-light p-3 outline-none' />
-            <button className=' mt-1 ml-[82%] border-0 w-fit h-fit text-lg font-medium rounded-xl px-7 py-2 bg-[rgb(51,103,199)] hover:bg-blue-600 hover:font-semibold text-white outline-none' onClick={() => { addComment(blogName, comment, author, email) }}>SEND </button>
+            <button className=' mt-1 ml-[87%] border-0 w-fit h-fit text-lg font-medium rounded-xl px-7 py-2 bg-[rgb(51,103,199)] hover:bg-blue-600 hover:font-semibold text-white outline-none' onClick={() => { addComment(blogName, comment, author, email) }}>SEND </button>
           </div>
 
           {/* <div className=' flex flex-col gap-3 w-[80%] h-[70%] rounded-xl p-4 border-2 border-black border-opacity-25 overflow-scroll'> */}
-          <div className=' flex flex-col gap-3 w-[80%] h-fit overflow-x-hidden rounded-xl p-4 '>
+          <div className=' flex flex-col gap-3 w-[80%] h-fit overflow-x-hidden rounded-xl p-4  '>
 
             {/* {fetchedComments?.slice(0, visibleItems).map((item, i) => { */}
-            {fetchedComments?.map((item, i) => {
+            {fetchedComments?.slice(0, visibleItems).map((item, i) => {
               return (
-                <div key={i} className=' flex flex-col gap-2 mb-2'>
+                <div key={i} className=' flex flex-col gap-2 shadow-sm p-2 rounded-xl'>
 
                   <div className='flex items-center gap-3'>
                     <img src={`https://avatar.iran.liara.run/username?username=${item.author}`} alt="" className='h-8' />
                     <h1 className='text-lg font-semibold'>{item?.author}</h1>
-                    <h1>{formatDistanceToNow(parseISO(item?.date), { addSuffix: true })}</h1>
+                    <h1 >{formatDistanceToNow(parseISO(item?.date), { addSuffix: true })}</h1>
                   </div>
-                  <p>{item.content}</p>
+                  <p className='px-1'>{item.content}</p>
 
                 </div>
               )
@@ -308,7 +320,7 @@ const Screen1 = ({ blogName }) => {
               <button onClick={loadMore} className=' cursor-pointer bg-gray-400 w-fit mx-auto px-3 py-2 rounded-full text-white hover:bg-gray-600/50'>Show More</button>
             )}
 
-            {visibleItems > fetchedComments.length && fetchedComments.length > 5 && (
+            {visibleItems >= fetchedComments.length && fetchedComments.length > 5 && (
               <button onClick={showLess} className=' cursor-pointer bg-gray-400 w-fit mx-auto px-3 py-2 rounded-full text-white hover:bg-gray-600/50'>Show Less</button>
             )}
 

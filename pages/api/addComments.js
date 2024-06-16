@@ -12,7 +12,7 @@ export default async function handler(req, res) {
       try {
         const client = await clientPromise;
         const db = client.db("etherwise");
-        const collection = db.collection('comments');
+        const collection = db.collection(blogName);
   
         const newComment = {
           ...req.body,
