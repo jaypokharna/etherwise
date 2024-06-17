@@ -45,7 +45,6 @@ export default function Screen1({ content1="", content2="", content3="", cards=[
                 ">
                 {
                     cards.map((z, i) => {
-                        console.log("Key - ",i)
                         return (<BlogCard key={i} {...z} color={`${ i%2==0 ? "bg-gradient-to-r from-[rgb(85,152,215)] to-[rgb(40,94,202)]" : "bg-[rgb(5,9,51)]" }`}
                          />)
                     })

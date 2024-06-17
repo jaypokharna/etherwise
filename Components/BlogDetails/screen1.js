@@ -62,7 +62,7 @@ const Screen1 = ({ blogName }) => {
     try {
       const blogN = decodeURIComponent(blogName);
 
-      const result = await fetch(`/api/comments?blogName=${blogN}`)
+      const result = await fetch(`/api/fetchComments?blogName=${blogN}`)
       const comments = await result.json();
           setComments(comments);
       
@@ -94,6 +94,22 @@ const Screen1 = ({ blogName }) => {
   //   }
   // }
 
+  const addEmail = async(email)=>{
+
+    const response = await fetch('/api/addEmail',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    })
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+  }
+
   const addComment = async (blogName, comment, author, email) => {
     try {
       const blogN = decodeURIComponent(blogName);
@@ -111,10 +127,12 @@ const Screen1 = ({ blogName }) => {
       }
 
       setAuthor("")
-      setEmail("")
       setComment("")
       await response.json();
+      addEmail(email);
+      setEmail("")
       fetchComments(blogN)
+      
       
 
       if (response.ok) {
@@ -139,9 +157,7 @@ const Screen1 = ({ blogName }) => {
 
   // Log comments whenever it updates
   useEffect(() => {
-
-    console.log(fetchedComments)
-
+    
   }, [fetchedComments]);
 
   const initialItems = 5;
