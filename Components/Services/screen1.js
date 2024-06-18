@@ -4,6 +4,8 @@
 'use client'
 
 import NormalCard from "@/Components/Cards/normal";
+import ServiceCard from "@/Components/Cards/service_card";
+
 export default function Screen1({ content1="", content2="", content3="", cards=[] }) {
 // bg-[url(/imgs/services/head_bg.svg)]
     return (
@@ -46,13 +48,10 @@ export default function Screen1({ content1="", content2="", content3="", cards=[
                 h-fit overflow-auto grid-cols-3 max-lg:flex max-lg:flex-col 
                 ">
                     {
-                        cards.map((z, i) => <NormalCard key={i} {...z}
+                        cards.map((z, i) => <ServiceCard key={i} {...z}
                             className=" bg-[url(/imgs/cards/card_bg.png)] bg-no-repeat bg-contain bg-center" />)
                     }
-                    {
-                        cards.map((z, i) => <NormalCard key={i} {...z}
-                            className=" bg-[url(/imgs/cards/card_bg.png)] bg-no-repeat bg-contain bg-center" />)
-                    }
+                   
             </div>
         </div>
     );

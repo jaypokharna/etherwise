@@ -15,21 +15,24 @@ const useHomeData = () => {
           heading: "Automation, Personalized",
           content:
             "Every business is unique, and so are our solutions. At Etherwise, we craft automation systems specifically tailored to fit the unique challenges and needs of your business.",
+            link : "/imgs/icons/icons/AutomationPersonalized.png"
         },
         {
           heading: "Dedicated Teams",
           content:
             "Gain a dedicated team of experts focused exclusively on your project, ensuring personalized attention and tailored results that drive success.",
+            link : "/imgs/icons/icons/Dedicated-Teams-icon.png"
         },
         {
           heading: "Proactive Support",
-          content:
-            "Etherwise delivers continuous, proactive support, ensuring your systems perform optimally as your business evolves.",
+          content: "Etherwise delivers continuous, proactive support, ensuring your systems perform optimally as your business evolves.",
+            link : "/imgs/icons/icons/support-icon.png"
         },
         {
           heading: "Seamless Integration",
           content:
             "Our automation solutions integrate effortlessly with your existing systems, ensuring smooth operation and enhanced functionality without the need for disruptive changes.",
+            link : "/imgs/icons/icons/seamless-integration-icon.png"
         },
       ],
     },

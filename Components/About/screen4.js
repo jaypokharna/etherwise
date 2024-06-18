@@ -9,7 +9,7 @@ import Heading2 from "@/Components/Headings/heading2";
 export default function Screen4({ content1="", content2="" }) {
 
     return (
-        <div className="bg-[--grey] py-[3%] max-lg:py-[5%] lg:h-[100vh] ">
+        <div className=" py-[3%] max-lg:py-[5%] lg:h-[100vh] ">
             <div className="
                 flex flex-col justify-evenly
                 bg-[url(/imgs/about/client_bg.svg)] bg-no-repeat bg-contain bg-center

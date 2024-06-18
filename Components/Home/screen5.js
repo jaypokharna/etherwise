@@ -34,13 +34,14 @@ export default function Screen5({ content1 = "", content2 = "", cards = [] }) {
 		}
 
 	  const options = {
-		dots : true,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		nextArrow: <SampleNextArrow />,
-		prevArrow: <SamplePrevArrow />
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+	speed: 5000,
+    autoplaySpeed: 1,
+    pauseOnHover: true,
+	cssEase: "linear",
 	}
 	  
 

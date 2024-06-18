@@ -10,21 +10,18 @@ export default function ServiceCard({ heading="", content="", className="", head
             flex flex-col
             items-start
             rounded-xl px-6 py-10
-            lg:h-[450px] h-[450px] w-full
+            lg:h-full h-[450px] w-full
             bg-[--dark]
             ${className}`}>
-            <img src={link || "https://api.dicebear.com/8.x/icons/svg?size=100"} className="
-               place-items-center
-               rounded-full h-[25%]
-               text-white mb-4
-               gradient-bg
-               "/>
+           <div className="place-items-center justify-center
+                p-3 w-[20%]  rounded-full border-2 border-opacity-30  border-blue-500 ">
+           <img src={link || "/imgs/icons/icons/AutomationPersonalized.png"} className="text-white  h-full "/>
+           </div>
             <span className={`text-white text-2xl mt-6 mb-2 `+headingClassName}>
                {heading}
             </span>
-            <p className="
-               overflow-hidden
-               font-stretched text-slate-400 text-lg h-[50%]">
+            <p className="  text-left
+               font-stretched text-slate-400 text-lg h-fit">
                {content}
             </p>
         </div>

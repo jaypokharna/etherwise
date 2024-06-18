@@ -3,11 +3,12 @@
 /* eslint-disable react/prop-types */
 import Heading2 from "@/Components/Headings/heading2";
 import NormalCard from "@/Components/Cards/normal";
+import ServiceCard from "../Cards/service_card";
 
 export default function Screen5({ content1="", content2="", cards=[] }) {
 
     return (
-        <div className="
+        <div className=" bg-[--grey] 
             flex flex-col justify-center
             responsive-container  gap-y-6 lg:gap-10  lg:p-0 max-lg:py-0 h-fit lg:h-screen
             ">
@@ -23,7 +24,7 @@ export default function Screen5({ content1="", content2="", cards=[] }) {
                 overflow-auto h-max lg:mb-[4%]
                 ">
                     {
-                        cards.map((z, i) => <NormalCard key={i} {...z}
+                        cards.map((z, i) => <ServiceCard key={i} {...z}
                             className="bg-[url(/imgs/cards/card_bg.png)] bg-no-repeat bg-contain bg-center" />)
                     }
             </div>

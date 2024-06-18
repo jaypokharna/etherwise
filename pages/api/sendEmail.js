@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     text : "Custom response to client"
   };
   const personalMailOptions = {
-    from: 'admin@therwise.io',
+    from: 'Etherwise',
     to : 'pokharnajay@gmail.com',
     subject,
     text

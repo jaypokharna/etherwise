@@ -14,14 +14,14 @@ export default function NormalCard({ heading="", content="", className="", headi
             h-[360px] w-full
             bg-[--dark]
             ${className}`}>
-            <img src={link || "https://api.dicebear.com/8.x/icons/svg?size=100"} className="
-               place-items-center
-               rounded-full h-[25%]
-               text-white mb-4 gradient-bg"/>
+           <div className="place-items-center justify-center
+                p-3 h-[25%] rounded-full border-2 border-opacity-30  border-blue-500 ">
+           <img src={link || "/imgs/icons/icons/AutomationPersonalized.png"} className="text-white mb-4 h-full "/>
+           </div>
             <span className={`text-white text-2xl mt-6 mb-2 `+headingClassName}>
                {heading}
             </span>
-            <p className="
+            <p className=" text-left
                overflow-hidden
                font-stretched text-slate-400 text-lg h-[50%]">
                {content}

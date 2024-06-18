@@ -6,17 +6,17 @@ const useServicesData = () => {
       content3:
         "Etherwise helps you unify your brand identity by collecting, storing and distributing design tokens and assets — automatically.",
       cards: [
-        {link : "https://api.dicebear.com/8.x/icons/svg?icon=display&size=100&backgroundColor=3A9BDC,1260CC",
+        {link : "/imgs/icons/icons/web-scraping-service-icon.webp",
           heading: "Python Development for Data Automation",
           content:
             "Leverage our Python expertise to develop tailored solutions that meet a wide range of automation needs. Whether you're looking to automate routine scripting tasks, extract valuable data through web scraping, or implement complex data processing workflows, we've got it covered. Our customized approach ensures that each solution enhances efficiency and aligns perfectly with your specific business objectives.",
         },
-        {link : "https://api.dicebear.com/8.x/icons/svg?icon=phone&size=100&backgroundColor=3A9BDC,1260CC",
+        {link : "/imgs/icons/icons/custom-ai-solutions-service-icon.png",
           heading: "AI-Driven Process Optimization",
           content:
             "Transform your business operations with custom AI solutions designed for diverse applications. Automate content generation pipelines to streamline creation across platforms, enhance customer service with intelligent response systems, and utilize predictive analytics for market trends and behavior insights. Each solution is tailored to integrate seamlessly with your existing processes, boosting operational efficiency and effectiveness.",
         },
-        {link : "https://api.dicebear.com/8.x/icons/svg?icon=laptop&size=100&backgroundColor=3A9BDC,1260CC",
+        {link : "/imgs/icons/icons/chatbot-development-service.png",
           heading: "Custom Chatbot Development",
           content:
             "Create intelligent chatbots tailored specifically to your business needs. Our chatbots enhance customer interactions with advanced natural language processing capabilities, providing instant, effective support. Designed for versatility, they can serve a wide range of functions from customer service to sales enhancement, integrating seamlessly into your existing digital environment to improve engagement and operational efficiency.",
