@@ -8,7 +8,7 @@ export default async function handler(req, res) {
 
     const { blogName } = req.query;
     const client = await clientPromise;
-    const db = client.db("etherwise");
+    const db = client.db("etherwise-marketing");
     const collection = db.collection(blogName);
     // const collection = db.collection('comments');
 

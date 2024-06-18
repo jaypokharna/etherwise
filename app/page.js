@@ -19,7 +19,7 @@ export default function Home() {
       <Screen1 {...data[0]} /> {/* Main Heading Circle Part */}
 			<Screen2 {...data[1]} /> {/* Why Choose Etherwise */}
 			<Screen3 {...data[2]} /> {/* Our story/About us */}
-			<Screen4 {...data[3]} /> {/* Services */}
+			{/* <Screen4 {...data[3]} /> Services */}
 			<Screen5 {...data[4]} /> {/* Testimonial */}
 			{/* <Screen6 {...data[5]} /> */} {/*  */}
 		</Layout>

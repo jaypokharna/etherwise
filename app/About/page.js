@@ -17,12 +17,12 @@ export default function About() {
 
 	return (
 		<Layout>
-            <Screen1 {...data[0]} />
-            <Screen2 {...data[1]} />
-            {/* <Screen3 {...data[2]} /> */}
-            <Screen4 {...data[3]} />
-            <Screen5 {...data[4]} />
-            <Screen6 {...homeData[4]} />
+          <Screen1 {...data[0]} />  {/*  Heading Image */}
+            <Screen2 {...data[1]} /> {/*  OUR FOUNDING VISION */}
+           {/*  <Screen3 {...data[2]} /> */}  {/*  GLOBAL CLIENTS AROUND THE WORLD */}
+            <Screen4 {...data[3]} /> {/* Globe Image  */}
+           {/* <Screen5 {...data[4]} /> */} {/*   */}
+            <Screen6 {...homeData[4]} /> {/*   */}
 		</Layout>
 	);
 }

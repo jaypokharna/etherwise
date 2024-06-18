@@ -10,7 +10,7 @@ export default function BgMaskCard({ name="", designation="", content="" }) {
     return (
 		<div className={`
             flex flex-col gap-6
-            items-start
+            items-start h-full
             rounded-xl px-8 py-10 lg:min-h-[398px] w-full max-lg:h-fit
             bg-white border-2 lg:relative z-[1]`}>
             <section className="flex items-center text-yellow-500">

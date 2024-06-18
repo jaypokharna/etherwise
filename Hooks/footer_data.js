@@ -42,17 +42,21 @@ const useFooterData = () => {
         name: "Home",
         link: "/",
       },
-      {
-        name: "Services",
-        link: "/services",
-      },
+      // {
+      //   name: "Services",
+      //   link: "/Services",
+      // },
       {
         name: "Blogs",
-        link: "/blogs",
+        link: "/Blogs",
       },
       {
         name: "About us",
-        link: "/about",
+        link: "/About",
+      },
+      {
+        name: "Contact",
+        link: "/Contact",
       },
     ],
   };

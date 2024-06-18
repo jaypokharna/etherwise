@@ -6,19 +6,10 @@
 
 import NormalCard from "@/Components/Cards/contact_card";
 import { useState } from "react";
+import { IoCallOutline } from "react-icons/io5";
+import { CiMail } from "react-icons/ci";
 
-
-
-
-export default function Screen1({
-  content1 = "",
-  content2 = "",
-  form = "",
-  content3 = "",
-  content4 = "",
-  content5 = "",
-  content6 = "",
-}) {
+export default function Screen1({content1 = "",content2 = "",form = "",content3 = "",content4 = "",content5 = "",content6 = "",}) {
   const [name, setname] = useState();
   const [email, setemail] = useState();
   const [number, setnumber] = useState();
@@ -30,7 +21,7 @@ export default function Screen1({
     const data = {
       to: email,
       subject: `Client Enquiry for ${service}`,
-      text: `Client's Name - ${name}\n\nClient's Email - ${email}\n\nClient's PH. Number - ${number}\n\nWhere client hear about us - ${whereuhear}\n\nService client require - ${service}\n\nClient's Message - ${message}`
+      text: {name,email,number,whereuhear,service,message}
     };
 
     const response = await fetch("/api/sendEmail", {
@@ -43,7 +34,7 @@ export default function Screen1({
 
     if (response.ok) {
       const result = await response.json();
-      console.log("Email sent");
+      console.log("Email sent",result);
     } else {
       console.error("Failed to send email:", response.status);
     }
@@ -65,7 +56,6 @@ export default function Screen1({
     }
   
   }
-
 
   return (
     <div
@@ -163,7 +153,7 @@ export default function Screen1({
             >
               <strong>
                 
-                Phone number*
+                Phone number
               </strong>
               <input
                 className={`
@@ -171,7 +161,6 @@ export default function Screen1({
                 `}
                 type="number"
                 placeholder="Enter your mobile with country code"
-                required
                 onChange={(e) => {
                   setnumber(e.target.value);
                 }}
@@ -186,7 +175,7 @@ export default function Screen1({
             >
               <strong>
                 
-                How did you hear about us*
+                How did you hear about us
               </strong>
               <input
                 className={`
@@ -194,7 +183,6 @@ export default function Screen1({
                 `}
                 type="text"
                 placeholder="Google, Meta, X, Ads, etc"
-                required
                 onChange={(e) => {
                   setwhereuhear(e.target.value);
                 }}
@@ -251,7 +239,7 @@ export default function Screen1({
           {/* Contact Form End */}
 
           <section
-            className="lg:p-2 
+            className="lg:p-2  
                         bg-[url(/imgs/home/btn_bg.svg)] bg-no-repeat bg-contain bg-left max-lg:flex items-center
                         "
           >
@@ -280,10 +268,10 @@ export default function Screen1({
           className="
                     flex flex-col gap-8"
         >
-          <NormalCard heading={content3} content={content4} />
+          <NormalCard heading={content3} content={content4} image={<IoCallOutline size={40}/>}/>
           <NormalCard
             heading={content5}
-            content={content6}
+            content={content6} image = {<CiMail size={40} />}
             className="gradient-bg"
           />
         </div>

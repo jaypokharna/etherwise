@@ -9,7 +9,7 @@ const useBlog2 = () => {
         },
         {
           "type": "image",
-          "src": "/imgs/blogs/blog2/image0.png",
+          "src": "/imgs/blogs/blog2/image1.png",
           "alt": "AI solutions illustration"
         },
         {
@@ -30,17 +30,12 @@ const useBlog2 = () => {
         },
         {
           "type": "image",
-          "src": "/imgs/blogs/blog2/image1.jpg",
+          "src": "/imgs/blogs/blog2/image2.png",
           "alt": "Nike SNKRS app interface"
         },
         {
           "type": "text",
           "value": "From Coffee Runs to Customer Connections: How Starbucks Brews Up Success with AI\nWho doesn't love a perfectly brewed cup of joe and a personalized reward? Starbucks understands this, and their \"Digital Flywheel\" initiative proves it. This AI-powered system tailors product offerings, rewards, and even ordering experiences based on your preferences. Imagine walking into your favourite Starbucks and having your usual latte ready before you even order! This focus on customer satisfaction, fuelled by AI, has solidified Starbucks' position as a global coffee giant."
-        },
-        {
-          "type": "image",
-          "src": "/imgs/blogs/blog2/image2.jpg",
-          "alt": "Starbucks Digital Flywheel interface"
         },
         {
           "type": "list",
@@ -82,7 +77,7 @@ const useBlog2 = () => {
         },
         {
           "type": "image",
-          "src": "/imgs/blogs/blog2/image3.jpg",
+          "src": "/imgs/blogs/blog2/image3.png",
           "alt": "AI performance metrics"
         },
         {

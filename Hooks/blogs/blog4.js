@@ -17,7 +17,7 @@ const useBlog4 = () => {
         },
         {
           "type": "image",
-          "src": "/imgs/blogs/blog4/image0.jpg",
+          "src": "/imgs/blogs/blog4/image1.png",
           "alt": "Automated pipeline concept illustration"
         },
         {
@@ -40,7 +40,7 @@ const useBlog4 = () => {
         },
         {
           "type": "image",
-          "src": "/imgs/blogs/blog4/image1.jpg",
+          "src": "/imgs/blogs/blog4/image2.png",
           "alt": "Productivity increase with automation"
         },
         {
@@ -61,7 +61,7 @@ const useBlog4 = () => {
         },
         {
           "type": "image",
-          "src": "/imgs/blogs/blog4/image2.jpg",
+          "src": "/imgs/blogs/blog4/image3.png",
           "alt": "Monitoring and optimization of automated pipelines"
         },
         {

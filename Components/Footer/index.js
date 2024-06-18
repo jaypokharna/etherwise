@@ -59,12 +59,57 @@ export default function Footer() {
     content3 = "",
     content4 = "",
     socials = [],
-    content5 = "",
+    content5 = "", 
     content6 = "",
     content7 = "",
   } = useFooterData();
 
+  const [email, setemail] = useState()
+
   const { logo } = useGlobalData();
+
+
+  async function sendEmail(email) {
+    const data = {
+      to: email,
+      subject: `New client, want to connect.`,
+      text: {email}
+    };
+
+    const response = await fetch("/api/sendEmail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      console.log("Email sent",result);
+    } else {
+      console.error("Failed to send email:", response.status);
+    }
+  }
+
+  
+  const addEmail = async(email)=>{
+
+    const response = await fetch('/api/addEmail',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    })
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+  }
+
+
 
   return ( //HTML Starts here
     <footer
@@ -153,8 +198,15 @@ export default function Footer() {
                 type="mail"
                 placeholder="Email Address"
                 className="outline-0 w-full px-2 bg-transparent"
+                onChange={(e)=>{setemail(e.target.value)}}
+                value={email}
               />
-              <button className="gradient-bg rounded-full lg:px-4 px-8">
+              <button className="gradient-bg rounded-full lg:px-4 px-8" 
+               onClick={() => {
+                sendEmail(email);
+                addEmail(email)
+                setemail("")
+              }}>
                 Connect With Us
               </button>
             </section>
@@ -251,8 +303,15 @@ Copyright 2023-2024, All Rights Reserved.
                 type="mail"
                 placeholder="Email Address"
                 className="outline-0 w-full px-2 bg-transparent"
+                onChange={(e)=>{setemail(e.target.value)}}
+                value={email}
               />
-              <button className="gradient-bg rounded-full lg:px-4 px-8">
+              <button className="gradient-bg rounded-full lg:px-4 px-8"
+               onClick={() => {
+                sendEmail(email);
+                addEmail(email)
+                setemail("")
+              }}>
                 Connect With Us
               </button>
             </section>

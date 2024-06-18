@@ -9,7 +9,7 @@ const useBlog1 = () => {
       },
       {
         "type": "image",
-        "src": "/imgs/blogs/blog1/image.jpg",
+        "src": "/imgs/blogs/blog1/image1.png",
         "alt": "Chatbot interaction on a phone"
       },
       {
@@ -74,7 +74,7 @@ const useBlog1 = () => {
       },
       {
         "type": "image",
-        "src": "/imgs/blogs/blog1/image2.jpg",
+        "src": "/imgs/blogs/blog1/image2.png",
         "alt": "Customer service interaction"
       },
       {
@@ -108,7 +108,7 @@ const useBlog1 = () => {
       },
       {
         "type": "image",
-        "src": "/imgs/blogs/blog1/image3.jpg",
+        "src": "/imgs/blogs/blog1/image3.png",
         "alt": "Chatbot metrics and success indicators"
       },
       {

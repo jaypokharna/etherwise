@@ -9,7 +9,7 @@ const useBlog3 = () => {
         },
         {
           "type": "image",
-          "src": "/imgs/blogs/blog3/image0.jpg",
+          "src": "/imgs/blogs/blog3/image0.png",
           "alt": "Web scraping concept illustration"
         },
         {
@@ -35,7 +35,7 @@ const useBlog3 = () => {
         },
         {
           "type": "image",
-          "src": "/imgs/blogs/blog3/image1.jpg",
+          "src": "/imgs/blogs/blog3/image1.png",
           "alt": "Market research data extraction"
         },
         {
@@ -48,7 +48,7 @@ const useBlog3 = () => {
         },
         {
           "type": "image",
-          "src": "/imgs/blogs/blog3/image2.jpg",
+          "src": "/imgs/blogs/blog3/image2.png",
           "alt": "AI-powered web scraping illustration"
         },
         {

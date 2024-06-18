@@ -48,8 +48,9 @@ export default function Screen1({ content1 = "" }) {
     <BasicContainer
       className=" 
 			grid place-items-center 
-             bg-no-repeat max-lg:bg-[length:1500px_550px] bg-contain bg-center lg:bg-bottom xl:mt-8 "
+             bg-no-repeat bg-[url(/imgs/home/ellipse.png)] max-lg:bg-[length:1500px_550px] bg-contain bg-center lg:bg-bottom xl:mt-8 "
     >
+      
       <img   
         src="/imgs/home/circle2.png"
         alt=""

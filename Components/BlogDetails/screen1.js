@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'next/navigation'
-import { CiFacebook } from "react-icons/ci";
+import { FaFacebookSquare } from 'react-icons/fa';
 import { FaWhatsapp } from "react-icons/fa";
-import { FaTelegramPlane } from "react-icons/fa";
-import { CiInstagram } from "react-icons/ci";
+import { FaLinkedinIn } from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';
 import EtherwiseIcon from "/public/imgs/etherwiseIcon/etherwiseIcon.png"
 import { formatDistanceToNow, parseISO } from 'date-fns';
 import useBlog1 from '@/Hooks/blogs/blog1';
@@ -13,6 +12,9 @@ import useBlog2 from '@/Hooks/blogs/blog2';
 import useBlog3 from '@/Hooks/blogs/blog3';
 import useBlog4 from '@/Hooks/blogs/blog4';
 import { useBlogsData } from '@/Hooks/blogs_data'
+import { useUrl } from "nextjs-current-url";
+import { FacebookShareButton,TwitterShareButton,LinkedinShareButton,WhatsappShareButton} from 'react-share';
+
 
 const Screen1 = ({ blogName }) => {
 
@@ -188,6 +190,19 @@ const Screen1 = ({ blogName }) => {
 
   }
 
+  const [blogurl, setblogurl] = useState()
+
+
+  const { href: currentUrl, pathname } = useUrl() ?? {};
+  
+  useEffect(() => {
+    
+    setblogurl(currentUrl)
+
+  }, [currentUrl])
+  
+
+
   return (
     <div className='w-full h-fit  flex flex-col items-center relative top-20 overflow-x-hidden'>
 
@@ -203,8 +218,8 @@ const Screen1 = ({ blogName }) => {
         <div className='left-table-content w-[45%] h-full sticky top-[20px] flex items-center justify-center'>
 
           <div className='w-[90%] h-full p-2 my-20 flex flex-col gap-2 bg-[#F4F7FF] rounded-lg bg-opacity-80 shadow-md'>
-          <a onClick={() => scrollToElement(data.title)} className="text-lg cursor-pointer hover:font-medium">{`-> ${data.title}`}</a>
-            {data.content.map((item,index)=>{
+          <a onClick={() => scrollToElement(data.title)} className="text-lg cursor-pointer hover:font-medium">{`-> ${data?.title}`}</a>
+            {data?.content.map((item,index)=>{
               if(item.type === 'heading'){
                 return <a onClick={() => scrollToElement(item.value)} key={index} className="text-lg cursor-pointer hover:font-medium">{`-> ${item.value}`}</a>;
               }
@@ -221,8 +236,8 @@ const Screen1 = ({ blogName }) => {
         <div className='right-content-part w-full h-full p-4 text-justify  '>
 
           <div className="container mx-auto p-5 border-black rounded-xl">
-            <h1 className="text-3xl font-bold mb-5 text-center" id={`${data.title}`}>{data.title}</h1>
-            {data.content.map((item, index) => {
+            <h1 className="text-3xl font-bold mb-5 text-center" id={`${data?.title}`}>{data?.title}</h1>
+            {data?.content.map((item, index) => {
               if (item.type === 'heading') {
                 return <h2 key={index} className="text-2xl font-semibold mt-5 mb-2" id={`${item.value}`}>{item.value}</h2>;
               } else if (item.type === 'text') {
@@ -279,10 +294,10 @@ const Screen1 = ({ blogName }) => {
           <div className='flex flex-col w-full h-full pb-3 items-center gap-2'>
             <h1 className='text-xl'>Share On</h1>
             <div className='flex h-full gap-4'>
-              <CiFacebook size={30} className='cursor-pointer ' />
-              <FaWhatsapp size={30} className='cursor-pointer ' />
-              <FaTelegramPlane size={30} className='cursor-pointer ' />
-              <CiInstagram size={30} className='cursor-pointer ' />
+              <FacebookShareButton children={<FaFacebookSquare size={33} className='cursor-pointer'/>} url={blogurl}/>
+              <WhatsappShareButton children={<FaWhatsapp size={33} className='cursor-pointer'/>} url={blogurl} />
+              <LinkedinShareButton children={<FaLinkedinIn size={33} className='cursor-pointer'/>} url={blogurl} />
+              <TwitterShareButton children={<FaTwitter size={33} className='cursor-pointer'/>} url={blogurl}/>
             </div>
           </div>
 

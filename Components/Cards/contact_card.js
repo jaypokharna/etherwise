@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 
-export default function NormalCard({ heading="", content="", className="", headingClassName="" }) {
+export default function NormalCard({ heading="", content="", className="", headingClassName="",image }) {
 
     return (
 		<div className={`
@@ -11,13 +11,13 @@ export default function NormalCard({ heading="", content="", className="", headi
             h-[47%] w-full2
             bg-[--dark]
             ${className}`}>
-             <i className="
+             <div className="
                 grid place-items-center
                 rounded-full w-1/5
                 p-3 aspect-square
                 text-white mb-4
-                gradient-bg
-                ">s</i>
+                border-2 border-white border-opacity-50
+                ">{image}</div>
              <span className={`text-white text-2xl mt-6 mb-2 `+headingClassName}>
                 {heading}
              </span> 

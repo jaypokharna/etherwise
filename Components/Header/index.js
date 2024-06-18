@@ -29,14 +29,14 @@ export function Nav({ navOpen=false, className="" }) {
           opacity: 0
         }, {
           opacity: 1,
-          delay: 0.5 // Delay of 0.5 seconds before animating the first element
+          delay: 0.2 // Delay of 0.5 seconds before animating the first element
         });
       } else {
         tl.fromTo(link, {
           opacity: 0
         }, {
           opacity: 1,
-          duration: 0.5
+          duration: 0.4
           // No delay for other elements, they will follow sequentially
         });
       }
@@ -91,7 +91,7 @@ export default function Header() {
   useGSAP(()=>{
     gsap.fromTo('.logo-link',{
       opacity : 0
-    },{opacity : 1,duration : 0.5})
+    },{opacity : 1,duration : 0.1})
   })
 
   return (

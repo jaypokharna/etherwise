@@ -8,10 +8,10 @@ const useRouteData = () => {
         path: "/About",
         name: "About us",
       },
-      {
-        path: "/Services",
-        name: "Services",
-      },
+      // {
+      //   path: "/Services",
+      //   name: "Services",
+      // },
       {
         path: "/Blogs",
         name: "Blogs",

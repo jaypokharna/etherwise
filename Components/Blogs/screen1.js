@@ -10,7 +10,7 @@ export default function Screen1({ content1="", content2="", content3="", cards=[
     return (
         <div className=" 
         grid place-items-center grid-rows-* md:grid-rows-* pt-24
-        responsive-container">
+        responsive-container min-h-[100vh]">
             <div className="
                 flex flex-col items-center justify-center max-lg:gap-1 gap-4
                 h-[42vh] px-2 self-end 

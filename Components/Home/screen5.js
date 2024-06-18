@@ -47,9 +47,9 @@ export default function Screen5({ content1 = "", content2 = "", cards = [] }) {
 
   return (
     <div
-      className="
+      className="  bg-[--grey] 
             flex flex-col justify-center 
-            responsive-container h-fit max-lg:py-6 lg:h-screen 
+             h-fit max-lg:py-6 lg:h-screen 
             "
     >
       <div
@@ -66,12 +66,12 @@ export default function Screen5({ content1 = "", content2 = "", cards = [] }) {
       </div>
 
       <div
-        className="testimonial-cards  h-[50%]
+        className="testimonial-cards
 				flex gap-9 flex-col  justify-center
 				max-lg:h-full max-lg:pt-6 max-lg:my-2  ">
 					<div className="h-full py-[2%]">
 
-        <Slider {...options} className="h-full">
+        <Slider {...options} className="h-full  flex items-center justify-center ">
           {cards.map((z, i) => (
 			  <TestimonialCard
               key={i}

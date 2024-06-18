@@ -43,13 +43,14 @@ export default function Screen5({ content1 = "", content2 = "", cards = [] }) {
     pauseOnHover: true,
 	cssEase: "linear",
 	}
+ 
 	  
 
   return (
     <div
-      className="
-            flex flex-col justify-center 
-            responsive-container h-fit max-lg:py-6 lg:h-screen 
+      className="bg-[--grey] 
+            flex flex-col justify-center w-[100vw]
+             h-fit max-lg:py-6 lg:h-screen 
             "
     >
       <div
