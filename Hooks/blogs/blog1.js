@@ -31,10 +31,10 @@ const useBlog1 = () => {
       {
         "type": "list",
         "value": [
-          "24/7 Availability: Unlike human reps who need sleep and vacations, chatbots are tireless workers. They're there to answer your questions any time, day or night.",
-          "Instant Gratification: We live in a fast-paced world, and waiting on hold isn't exactly our idea of a good time. Chatbots provide immediate answers, keeping customers happy and frustration-free.",
-          "Personalized Touch: Chatbots can be programmed to learn from past interactions, offering a more personalized experience. Imagine a virtual assistant who remembers your previous purchases and recommends similar products.",
-          "Multilingual Support: Chatbots can break down language barriers, providing customer service in a variety of languages. This opens doors to new markets and a wider customer base."
+         <><b>24/7 Availability:</b> Unlike human reps who need sleep and vacations, chatbots are tireless workers. They're there to answer your questions any time, day or night.</>,
+         <><b>Instant Gratification:</b> We live in a fast-paced world, and waiting on hold isn't exactly our idea of a good time. Chatbots provide immediate answers, keeping customers happy and frustration-free.</>,
+         <><b>Personalized Touch:</b> Chatbots can be programmed to learn from past interactions, offering a more personalized experience. Imagine a virtual assistant who remembers your previous purchases and recommends similar products.</>,
+         <><b>Multilingual Support:</b> Chatbots can break down language barriers, providing customer service in a variety of languages. This opens doors to new markets and a wider customer base.</>
         ]
       },
       {
@@ -62,10 +62,10 @@ const useBlog1 = () => {
       {
         "type": "list",
         "value": [
-          "Start Simple: Don't try to build a do-it-all chatbot right away. Focus on automating common tasks like answering frequently asked questions or providing order tracking information.",
-          "Keep it Conversational: Your chatbot should feel friendly and approachable. Use casual language and avoid technical jargon.",
-          "Provide Clear Options: Make it easy for users to navigate the conversation and find the information they need.",
-          "Offer a Human Touch: While chatbots can handle many tasks, there will always be situations that require a human touch. Make it easy for users to escalate complex issues to a live agent."
+         <><b>Start Simple:</b> Don't try to build a do-it-all chatbot right away. Focus on automating common tasks like answering frequently asked questions or providing order tracking information.</>,
+         <><b>Keep it Conversational:</b> Your chatbot should feel friendly and approachable. Use casual language and avoid technical jargon.</>,
+         <><b>Provide Clear Options:</b> Make it easy for users to navigate the conversation and find the information they need.</>,
+         <><b>Offer a Human Touch:</b> While chatbots can handle many tasks, there will always be situations that require a human touch. Make it easy for users to escalate complex issues to a live agent.</>
         ]
       },
       {
@@ -95,16 +95,19 @@ const useBlog1 = () => {
         "value": "Common Questions About Chatbots:"
       },
       {
-        "type": "text",
-        "value": "Q: Can chatbots understand complex queries?\nA: Yes, with advances in natural language processing (NLP), chatbots can understand and respond to complex queries. They can also learn from interactions to improve over time."
+        "type": "faq",
+        "question": <><b>Q: Can chatbots understand complex queries?</b></>,
+        "answer" : "A: Yes, with advances in natural language processing (NLP), chatbots can understand and respond to complex queries. They can also learn from interactions to improve over time."
       },
       {
-        "type": "text",
-        "value": "Q: Are chatbots secure?\nA: Security is a top priority for chatbot developers. Ensure your chatbot uses encryption and follows best practices to protect customer data."
+        "type": "faq",
+        "question": <><b>Q: Are chatbots secure?</b></>,
+        "answer" : "A: Security is a top priority for chatbot developers. Ensure your chatbot uses encryption and follows best practices to protect customer data."
       },
       {
-        "type": "text",
-        "value": "Q: How do I measure the success of my chatbot?\nA: Key performance indicators (KPIs) such as response time, customer satisfaction scores, and the number of queries resolved without human intervention can help measure your chatbot’s success."
+        "type": "faq",
+        "question": <><b>Q: How do I measure the success of my chatbot?</b></>,
+        "answer" : "A: Key performance indicators (KPIs) such as response time, customer satisfaction scores, and the number of queries resolved without human intervention can help measure your chatbot’s success."
       },
       {
         "type": "image",

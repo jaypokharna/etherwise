@@ -33,11 +33,11 @@ export default function Screen2({ content1="", content2="", content3="" }) {
                         />
 
                     <section className="my-8 w-full text-justify">
-                        <p className="text-base w-full xl:text-xl text-slate-500">
+                        <p className="text-base w-full xl:text-xl ">
                             {content3}
                         </p>
                     </section>
-                    <section className="p-2
+                    {/* <section className="p-2
                         bg-[url(/imgs/home/btn_bg.svg)] bg-no-repeat bg-contain bg-left
                         ">
                         <button className="
@@ -46,7 +46,7 @@ export default function Screen2({ content1="", content2="", content3="" }) {
                             ">
                             Learn More
                         </button>
-                    </section>
+                    </section> */}
                 </div>
                 <div className="w-1/2 flex  items-center justify-center
                     ">

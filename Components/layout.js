@@ -27,7 +27,7 @@ export default function Layout({ children="" }) {
   return (
     <>
         <Header />
-        <main className="space-y-12 md:space-y-6 lg:space-y-3 xl:space-y-0">
+        <main className="space-y-12 md:space-y-6 lg:space-y-3 xl:space-y-0 ">
             {children}
         </main>
         <Footer />

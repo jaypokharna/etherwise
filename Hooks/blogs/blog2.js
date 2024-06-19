@@ -40,10 +40,10 @@ const useBlog2 = () => {
         {
           "type": "list",
           "value": [
-            "Increase sales and conversions with personalized recommendations and targeted marketing.",
-            "Boost operational efficiency by automating tasks and optimizing resources.",
-            "Reduce costs by minimizing waste and preventing downtime.",
-            "Enhance customer satisfaction by providing a more personalized and frictionless experience."
+           "Increase sales and conversions with personalized recommendations and targeted marketing.",
+           "Boost operational efficiency by automating tasks and optimizing resources.",
+           "Reduce costs by minimizing waste and preventing downtime.",
+           "Enhance customer satisfaction by providing a more personalized and frictionless experience."
           ]
         },
         {
@@ -61,10 +61,10 @@ const useBlog2 = () => {
         {
           "type": "list",
           "value": [
-            "Customer Service: Automate responses to common queries, freeing up your team to handle more complex issues. Chatbots can provide instant, 24/7 support, improving customer satisfaction.",
-            "Sales and Marketing: Use AI to analyse customer data and predict purchasing behaviour, enabling more targeted marketing campaigns. Personalization powered by AI can significantly boost engagement and conversion rates.",
-            "Operations: Optimize supply chain management and inventory control through predictive analytics. AI-driven pipelining can streamline operations and reduce costs.",
-            "Data Extraction: Automate web scraping to gather valuable data from various sources. This data can be used for market analysis, competitor research, and more, providing insights that drive strategic decisions."
+           <><b>Customer Service:</b> Automate responses to common queries, freeing up your team to handle more complex issues. Chatbots can provide instant, 24/7 support, improving customer satisfaction.</>,
+           <><b>Sales and Marketing:</b> Use AI to analyse customer data and predict purchasing behaviour, enabling more targeted marketing campaigns. Personalization powered by AI can significantly boost engagement and conversion rates.</>,
+           <><b>Operations:</b> Optimize supply chain management and inventory control through predictive analytics. AI-driven pipelining can streamline operations and reduce costs.</>,
+           <><b>Data Extraction:</b> Automate web scraping to gather valuable data from various sources. This data can be used for market analysis, competitor research, and more, providing insights that drive strategic decisions.</>
           ]
         },
         {
@@ -93,16 +93,20 @@ const useBlog2 = () => {
           "value": "FAQs"
         },
         {
-          "type": "text",
-          "value": "Q: How do custom AI solutions differ from off-the-shelf AI products?\nA: Custom AI solutions are specifically designed to meet the unique needs and requirements of a business, providing personalized support that off-the-shelf products may not offer."
+          "type": "faq",
+          "question": <><b>Q: How do custom AI solutions differ from off-the-shelf AI products?</b></>,
+          "answer": "A: Custom AI solutions are specifically designed to meet the unique needs and requirements of a business, providing personalized support that off-the-shelf products may not offer."
         },
         {
-          "type": "text",
-          "value": "Q: What are the key benefits of integrating custom AI solutions into business operations?\nA: Custom AI solutions can enhance efficiency, accuracy, and decision-making processes, leading to improved productivity, innovation, and competitive advantage."
+          "type": "faq",
+          "question": <><b>Q: What are the key benefits of integrating custom AI solutions into business operations?</b></>,
+          "answer": "A: Custom AI solutions can enhance efficiency, accuracy, and decision-making processes, leading to improved productivity, innovation, and competitive advantage."
         },
         {
-          "type": "text",
-          "value": "Q: How can businesses measure the success and impact of custom AI solutions on their operations?\nA: Businesses can measure ROI, track key performance indicators, and conduct regular audits and reviews to evaluate the performance and impact of custom AI solutions on their operations."
+          "type": "faq",
+          "question": <><b>Q: How can businesses measure the success and impact of custom AI solutions on their operations?</b></>,
+          "answer": "A: Businesses can measure ROI, track key performance indicators, and conduct regular audits and reviews to evaluate the performance and impact of custom AI solutions on their operations."
+
         }
       ]
     }

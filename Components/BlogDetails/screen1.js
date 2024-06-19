@@ -14,7 +14,8 @@ import useBlog4 from '@/Hooks/blogs/blog4';
 import { useBlogsData } from '@/Hooks/blogs_data'
 import { useUrl } from "nextjs-current-url";
 import { FacebookShareButton,TwitterShareButton,LinkedinShareButton,WhatsappShareButton} from 'react-share';
-
+import { gsap } from 'gsap';
+import { useGSAP } from "@gsap/react";
 
 const Screen1 = ({ blogName }) => {
 
@@ -177,7 +178,7 @@ const Screen1 = ({ blogName }) => {
 
   const scrollToElement = (id) => {
     const element = document.getElementById(id);
-    const offset = element.offsetTop - 20;
+    const offset = element.offsetTop - 65;
     window.scrollTo({
       top: offset, 
       behavior: 'smooth'
@@ -200,24 +201,29 @@ const Screen1 = ({ blogName }) => {
     setblogurl(currentUrl)
 
   }, [currentUrl])
-  
 
 
   return (
-    <div className='w-full h-fit  flex flex-col items-center relative top-20 overflow-x-hidden'>
+    <div className='con w-full h-fit flex flex-col items-center relative top-6 '>
+      
+      
 
-      <div className='w-[100vw]'>
-        <img src="/imgs/blogs/blogDetails/headingImg.png" className="w-[100vw]" alt="" />
+      <div className='w-[100vw] h-fit flex items-center justify-center'>
+      <div className='absolute bg-[--grey] w-full z-[-1] -top-20 h-fit'>
+      <img src="/imgs/blogs/blogDetails/headingImg.png" className="opacity-0" alt="" />
+
+      </div>
+        <img src="/imgs/blogs/blogDetails/headingImg.png" className="" alt="" />
       </div>
 
-      <div className='w-[100vw] h-fit p-6 px-8  flex'>
+      <div className='w-[100vw] h-fit px-8 flex static'>
 
 
 
         {/* Table of content */}
-        <div className='left-table-content w-[45%] h-full sticky top-[20px] flex items-center justify-center'>
+        <div className='left-table-content w-[60%] h-fit sticky top-[20px] flex items-center justify-center'>
 
-          <div className='w-[90%] h-full p-2 my-20 flex flex-col gap-2 bg-[#F4F7FF] rounded-lg bg-opacity-80 shadow-md'>
+          <div className='w-[80%] h-full p-2 my-32 flex flex-col gap-2 bg-[#F4F7FF] rounded-lg bg-opacity-80 shadow-md actual-table'>
           <a onClick={() => scrollToElement(data.title)} className="text-lg cursor-pointer hover:font-medium">{`-> ${data?.title}`}</a>
             {data?.content.map((item,index)=>{
               if(item.type === 'heading'){
@@ -233,9 +239,9 @@ const Screen1 = ({ blogName }) => {
 
 
         {/* Blog */}
-        <div className='right-content-part w-full h-full p-2 text-justify  '>
+        <div className='right-content-part w-full h-full p-2 text-justify flex items-center justify-center '>
 
-          <div className="container mx-auto p-5 border-black rounded-xl">
+          <div className="container mx-auto p-5 border-black rounded-xl w-[90%]">
             <h1 className="text-4xl font-bold mb-5 text-center" id={`${data?.title}`}>{data?.title}</h1>
             {data?.content.map((item, index) => {
               if (item.type === 'heading') {
@@ -243,7 +249,7 @@ const Screen1 = ({ blogName }) => {
               } else if (item.type === 'text') {
                 return <p key={index} className="text-lg mb-4">{item.value}</p>;
               } else if (item.type === 'image') {
-                return <img key={index} src={item.src} alt={item.alt} className="my-5 mx-auto max-w-full rounded-3xl  border-black drop-shadow-md  shadow-black" />;
+                return <img key={index} src={item.src} alt={item.alt} className="w-full my-5 mx-auto max-w-full rounded-3xl  border-black drop-shadow-md  shadow-black" />;
               } else if (item.type === 'list') {
                 return (
                   <ul key={index} className="list-disc list-inside ml-5 mb-4">
@@ -263,6 +269,9 @@ const Screen1 = ({ blogName }) => {
                     </ul>
                   </div>
                 );
+              } 
+              else if(item.type === 'faq') {
+                return (<><p key={index} className="text-lg mb-4">{item.question}</p><p key={index} className="text-lg mb-4">{item.answer}</p></>);
               } else {
                 return null;
               }
@@ -275,7 +284,7 @@ const Screen1 = ({ blogName }) => {
       </div>
 
       {/* Comments writing Section */}
-      <div className='w-[100vw] h-fit  py-6 px-4 flex justify-evenly bg-[#F4F7FF]'>
+      <div className='w-[100%] h-fit  py-6 px-4 flex gap-52 items-center justify-center bg-[#F4F7FF]'>
 
         <div className=' w-[25%] h-fit p-4 pt-8 flex flex-col items-center justify-center'>
 

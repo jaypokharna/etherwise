@@ -47,14 +47,15 @@ export default function Screen1({
         <section className="mb-4">
           <p>
             Discover insights and innovations in automation and AI. <br></br>
-            Our expert-driven content helps you stay informed and ahead in the rapidly evolving tech landscape.
+            Our expert-driven content helps you stay informed and ahead in the
+            rapidly evolving tech landscape.
           </p>
         </section>
       </div>
       <div
         className="
-                grid grid-cols-3 gap-6 mt-5
-                h-full row-span-2 overflow-auto  mx-auto border-black max-lg:flex max-lg:flex-col
+                grid grid-cols-3 gap-6 mt-5  p-4 min-h-[100vh]
+                  overflow-hidden mx-auto max-lg:flex max-lg:flex-col
                 "
       >
         {cards.map((z, i) => {
@@ -77,6 +78,6 @@ export default function Screen1({
                     Learn More
                 </a>
             </section> */}
-    </div>  
+    </div>
   );
 }

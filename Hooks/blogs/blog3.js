@@ -9,7 +9,7 @@ const useBlog3 = () => {
         },
         {
           "type": "image",
-          "src": "/imgs/blogs/blog3/image0.png",
+          "src": "/imgs/blogs/blog3/image1.png",
           "alt": "Web scraping concept illustration"
         },
         {
@@ -26,11 +26,10 @@ const useBlog3 = () => {
         },
         {
           "type": "list",
-          "value": [
-            "Market Research: Use web scraping to gather data on market trends, competitor analysis, and consumer behaviour.",
-            "Pricing Strategy: Monitor competitor pricing to adjust your strategies dynamically.",
-            "Customer Insights: Extract and analyse customer reviews and feedback to improve products and services.",
-            "Lead Generation: Collect data on potential leads from various online platforms to boost your sales pipeline."
+          "value": [<><b>Market Research:</b> Use web scraping to gather data on market trends, competitor analysis, and consumer behaviour.</>,
+            <><b>Pricing Strategy:</b> Monitor competitor pricing to adjust your strategies dynamically.</>,
+            <><b>Customer Insights:</b> Extract and analyse customer reviews and feedback to improve products and services.</>,
+            <><b>Lead Generation:</b> Collect data on potential leads from various online platforms to boost your sales pipeline.</>
           ]
         },
         {
@@ -64,16 +63,19 @@ const useBlog3 = () => {
           "value": "FAQs"
         },
         {
-          "type": "text",
-          "value": "Q: How does web scraping differ from traditional data collection methods?\nA: Web scraping automates the extraction of large volumes of data from websites, making it faster and more efficient than manual data collection."
+          "type": "faq",
+          "question": <><b>Q: How does web scraping differ from traditional data collection methods?"</b></>,
+          "answer": "A: Web scraping automates the extraction of large volumes of data from websites, making it faster and more efficient than manual data collection."
         },
         {
-          "type": "text",
-          "value": "Q: What are the key benefits of web scraping for business operations?\nA: Web scraping provides real-time data, enhances market intelligence, improves decision-making, and boosts operational efficiency."
+          "type": "faq",
+          "question": <><b>Q: What are the key benefits of web scraping for business operations?`</b></>,
+          "answer" : "A: Web scraping provides real-time data, enhances market intelligence, improves decision-making, and boosts operational efficiency."
         },
         {
-          "type": "text",
-          "value": "Q: How can businesses ensure the ethical use of web scraping?\nA: Businesses should comply with legal guidelines, respect website terms of service, and prioritize data privacy and security."
+          "type": "faq",
+          "question": <><b>Q: How can businesses ensure the ethical use of web scraping?"</b></>,
+          "answer": "A: Businesses should comply with legal guidelines, respect website terms of service, and prioritize data privacy and security."
         }
       ]
     }

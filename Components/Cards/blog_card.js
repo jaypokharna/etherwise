@@ -13,13 +13,13 @@ export default function BlogCard({ img="", date="", heading="", content="", link
     const possibleColors = ["bg-red-400","bg-blue-400"]
 
     return (
-      <Link href={`/Blogs/${heading}`} passHref>
+      <Link href={`/Blogs/${heading}`} passHref className="h-full w-full flex items-center justify-center">
         <div
           className={`
-            flex flex-col gap-2
+            flex flex-col gap-2 transform transition-transform duration-400 hover:scale-105
             rounded-xl p-6
-            h-full w-full 
-             ${color} text-black shadow-xl shadow-slate-200 border 
+            h-[95%] w-[95%] 
+             ${color} text-black drop-shadow-lg shadow-slate-200 border 
             ${className}`}
         >
           <img

@@ -97,7 +97,7 @@ export default function Header() {
   return (
     <header className="
       py-8 bg-[#ffffffaa] backdrop-blur
-       w-[100vw] fixed top-0 z-10">
+       w-[100vw] fixed top-0 z-10  overflow-x-hidden">
       <div className="
         flex items-center justify-between gap-6
         relative lg:pl-36

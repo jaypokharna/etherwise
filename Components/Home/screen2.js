@@ -11,7 +11,7 @@ export default function Screen2({ content1="", content2="", content3="", cards=[
     return (
 		<div className="
             lg:flex lg:flex-col items-center justify-center
-gap-12 max-lg:py-6
+                gap-12 max-lg:py-6
              lg:px-16 max-lg:px-[5%] lg:h-[100vh] bg-[--grey] 
             ">
 			<div className="

@@ -31,11 +31,11 @@ const useBlog4 = () => {
         {
           "type": "list",
           "value": [
-            "Time Savings: Imagine a scenario where your sales team spends hours manually entering data into your CRM. With an automated pipeline, this process is handled seamlessly, allowing your team to focus on closing deals instead. Automation ensures that data is entered accurately and instantly, saving countless hours that can be better spent on high-value tasks.",
-            "Cost Reduction: Automation reduces the need for extensive manual labour, which in turn lowers labour costs. Additionally, by minimizing errors, businesses can avoid the costs associated with correcting mistakes. This dual benefit of reducing direct labour costs and mitigating error-related expenses results in significant cost savings.",
-            "Increased Productivity: Automated pipelines enable your employees to work smarter, not harder. By eliminating mundane and repetitive tasks, your team can focus on more creative and strategic endeavours. This boost in productivity can lead to faster project completions and more innovative solutions.",
-            "Enhanced Accuracy: Human error is inevitable, but with automation, the risk of mistakes is greatly reduced. Automated pipelines ensure that tasks are completed accurately every time, leading to more reliable data and better decision-making.",
-            "Scalability: As your business grows, so do your operational needs. Automated pipelines provide the scalability required to handle increasing volumes of work without a corresponding increase in manual effort. This makes scaling up more efficient and cost-effective."
+            <><b>Time Savings:</b>Imagine a scenario where your sales team spends hours manually entering data into your CRM. With an automated pipeline, this process is handled seamlessly, allowing your team to focus on closing deals instead. Automation ensures that data is entered accurately and instantly, saving countless hours that can be better spent on high-value tasks.</> ,
+            <><b>Cost Reduction:</b>Automation reduces the need for extensive manual labour, which in turn lowers labour costs. Additionally, by minimizing errors, businesses can avoid the costs associated with correcting mistakes. This dual benefit of reducing direct labour costs and mitigating error-related expenses results in significant cost savings.</> ,
+            <><b>Increased Productivity:</b>Automated pipelines enable your employees to work smarter, not harder. By eliminating mundane and repetitive tasks, your team can focus on more creative and strategic endeavours. This boost in productivity can lead to faster project completions and more innovative solutions.</> ,
+            <><b>Enhanced Accuracy:</b>Human error is inevitable, but with automation, the risk of mistakes is greatly reduced. Automated pipelines ensure that tasks are completed accurately every time, leading to more reliable data and better decision-making.</> ,
+            <><b>Scalability:</b>As your business grows, so do your operational needs. Automated pipelines provide the scalability required to handle increasing volumes of work without a corresponding increase in manual effort. This makes scaling up more efficient and cost-effective.</> 
           ]
         },
         {
@@ -77,16 +77,19 @@ const useBlog4 = () => {
           "value": "FAQs"
         },
         {
-          "type": "text",
-          "value": "Q: How does automation differ from traditional process management?\nA: Automation uses technology to handle repetitive tasks, reducing the need for manual intervention and increasing efficiency compared to traditional process management methods."
+          "type": "faq",
+          "question": <><b>Q: How does automation differ from traditional process management?</b></>,
+          "answer": "A: Automation uses technology to handle repetitive tasks, reducing the need for manual intervention and increasing efficiency compared to traditional process management methods."
         },
         {
-          "type": "text",
-          "value": "Q: What are the key benefits of automated pipelines for business operations?\nA: Automated pipelines save time, reduce costs, increase productivity, enhance accuracy, and offer scalability for growing business needs."
+          "type": "faq",
+          "question": <><b>Q: What are the key benefits of automated pipelines for business operations?</b></>,
+          "answer": "A: Automated pipelines save time, reduce costs, increase productivity, enhance accuracy, and offer scalability for growing business needs."
         },
         {
-          "type": "text",
-          "value": "Q: How can businesses ensure successful implementation of automated pipelines?\nA: Businesses can ensure successful implementation by providing thorough training to their teams, continuously monitoring performance, and optimizing the automated processes based on feedback and data analysis."
+          "type": "faq",
+          "question": <><b>Q: How can businesses ensure successful implementation of automated pipelines?</b></>,
+          "answer": "A: Businesses can ensure successful implementation by providing thorough training to their teams, continuously monitoring performance, and optimizing the automated processes based on feedback and data analysis."
         }
       ]
     }

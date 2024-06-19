@@ -23,7 +23,7 @@ export default function Screen3({ content1="", content2="", content3="" }) {
                         content1={content1} content2={content2} />
                 
                 <section className="my-8">
-                    <p className="text-base xl:text-xl text-slate-500 max-lg:text-justify">
+                    <p className="text-base xl:text-xl max-lg:text-justify">
                         {content3}
                     </p>
                 </section>
@@ -34,7 +34,7 @@ export default function Screen3({ content1="", content2="", content3="" }) {
                         grid place-items-center
                         text-white pl-8
                         ">
-                        Learn More
+                        <a href="/About">Learn More</a>
                     </button>
                 </section>
 			</div>
