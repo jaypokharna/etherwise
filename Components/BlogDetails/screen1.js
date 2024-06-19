@@ -233,13 +233,13 @@ const Screen1 = ({ blogName }) => {
 
 
         {/* Blog */}
-        <div className='right-content-part w-full h-full p-4 text-justify  '>
+        <div className='right-content-part w-full h-full p-2 text-justify  '>
 
           <div className="container mx-auto p-5 border-black rounded-xl">
-            <h1 className="text-3xl font-bold mb-5 text-center" id={`${data?.title}`}>{data?.title}</h1>
+            <h1 className="text-4xl font-bold mb-5 text-center" id={`${data?.title}`}>{data?.title}</h1>
             {data?.content.map((item, index) => {
               if (item.type === 'heading') {
-                return <h2 key={index} className="text-2xl font-semibold mt-5 mb-2" id={`${item.value}`}>{item.value}</h2>;
+                return <h2 key={index} className="text-4xl font-semibold mt-5 mb-2" id={`${item.value}`}>{item.value}</h2>;
               } else if (item.type === 'text') {
                 return <p key={index} className="text-lg mb-4">{item.value}</p>;
               } else if (item.type === 'image') {

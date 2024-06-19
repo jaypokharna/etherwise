@@ -61,3 +61,11 @@ margin: 1px;
 .slick-dots{
     bottom: -40px;
 }
+
+.blog-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.blog-card:hover {
+    transform: scale(1.02);
+}

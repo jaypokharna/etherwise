@@ -15,24 +15,25 @@ const useHomeData = () => {
           heading: "Automation, Personalized",
           content:
             "Every business is unique, and so are our solutions. At Etherwise, we craft automation systems specifically tailored to fit the unique challenges and needs of your business.",
-            link : "/imgs/icons/icons/AutomationPersonalized.png"
+          link: "/imgs/icons/icons/AutomationPersonalized.png",
         },
         {
           heading: "Dedicated Teams",
           content:
-            "Gain a dedicated team of experts focused exclusively on your project, ensuring personalized attention and tailored results that drive success.",
-            link : "/imgs/icons/icons/Dedicated-Teams-icon.png"
+            "Gain a dedicated team of experts focused exclusively on your project, ensuring personalized attention and tailored results. Our specialists provide consistent support and innovative solutions that drive success.",
+          link: "/imgs/icons/icons/Dedicated-Teams-icon.png",
         },
         {
           heading: "Proactive Support",
-          content: "Etherwise delivers continuous, proactive support, ensuring your systems perform optimally as your business evolves.",
-            link : "/imgs/icons/icons/support-icon.png"
+          content:
+            "Etherwise delivers continuous, proactive support, ensuring your systems perform optimally and adapt seamlessly to evolving business needs, minimizing downtime and maximizing efficiency.",
+          link: "/imgs/icons/icons/support-icon.png",
         },
         {
           heading: "Seamless Integration",
           content:
             "Our automation solutions integrate effortlessly with your existing systems, ensuring smooth operation and enhanced functionality without the need for disruptive changes.",
-            link : "/imgs/icons/icons/seamless-integration-icon.png"
+          link: "/imgs/icons/icons/seamless-integration-icon.png",
         },
       ],
     },
@@ -40,7 +41,7 @@ const useHomeData = () => {
       content1: "OUR STORY",
       content2: "OUR FOUNDING VISION",
       content3:
-        "Founded at the forefront of the tech evolution, Etherwise embarked on a mission to transform businesses by integrating advanced automation systems into their existing frameworks. Driven by data and a passion for efficiency, we craft solutions that not only push the boundaries of what's possible but also ensure sustainable success. As we grow, we are committed to leading the way in automation, helping businesses achieve peak operational efficiency through our tailored, forward-thinking solutions. ",
+        "Founded at the forefront of the tech evolution, Etherwise embarked on a mission to transform businesses by integrating advanced automation systems into their existing frameworks. Driven by data and a passion for efficiency, we craft solutions that not only push the boundaries of what's possible but also ensure sustainable success. With a commitment to personalization, dedicated teams, and cost-effective solutions, we are set to lead the way in automation. As we grow, we remain dedicated to helping businesses achieve peak operational efficiency through our tailored, forward-thinking solutions.",
     },
     {
       content1: "SERVICES PROVIDED",

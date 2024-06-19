@@ -113,11 +113,11 @@ export default function Screen1({ content1 = "" }) {
             <span className="roboto-medium">Etherwise</span>
           </p>
         </section>
-        <section className="text-sm">
+        {/* <section className="text-sm">
           <p>Happy Customers</p>
           <strong className="font-extrabold">2340+</strong>
           <img className="mx-auto w-[70%]" src={customersImg} alt="" />
-        </section>
+        </section> */}
       </div>
     </BasicContainer>
   );
