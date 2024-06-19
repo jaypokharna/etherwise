@@ -53,7 +53,7 @@ export default function Screen1({content1 = "",content2 = "",form = "",content3 
     })
 
     if(response.ok) {
-      toast.success(`We've received your message.\nCheck you email for a confirmation and further details`)
+      toast.success(`We've received your message.\nCheck you email for a confirmation and further details.`)
     }
   
     if (!response.ok) {

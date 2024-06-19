@@ -107,7 +107,7 @@ export default function Footer() {
     
     if(response.ok){
       console.log("Email Saved")
-      toast.success(`We've received your message.\nCheck you email for a confirmation and further details`);
+      toast.success(`We've received your message.\nCheck you email for a confirmation and further details.`);
     }
 
     if (!response.ok) {
