@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 
 import Footer from './Footer';
 import Header from "./Header";
+import { Toaster } from "react-hot-toast";
 
 export default function Layout({ children="" }) {
   const [toastMsg, setToastMsg] = useState("");
@@ -22,13 +23,14 @@ export default function Layout({ children="" }) {
         setToastMsg("");
       }, 2000);
     }
-  }, [toastMsg]);
+  }, [toastMsg]); 
 
   return (
     <>
         <Header />
         <main className="space-y-12 md:space-y-6 lg:space-y-3 xl:space-y-0 ">
-            {children}
+        <Toaster/>
+        {children}
         </main>
         <Footer />
     </>

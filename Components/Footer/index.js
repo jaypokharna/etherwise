@@ -13,6 +13,7 @@ import FooterBg from "/public/imgs/footer/footer_bg.png";
 import headerLogo from "/public/imgs/footer/footer_logo.png";
 import Link from "next/link";
 import Image from "next/image";
+import toast from "react-hot-toast";
 
 export function FooterList({ name = "", items = [],classes }) {
   return (
@@ -95,6 +96,7 @@ export default function Footer() {
   
   const addEmail = async(email)=>{
 
+    
     const response = await fetch('/api/addEmail',{
       method: 'POST',
       headers: {
@@ -102,6 +104,11 @@ export default function Footer() {
       },
       body: JSON.stringify({ email }),
     })
+    
+    if(response.ok){
+      console.log("Email Saved")
+      toast.success(`We've received your message.\nCheck you email for a confirmation and further details`);
+    }
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -311,6 +318,7 @@ Copyright 2023-2024, All Rights Reserved.
                 sendEmail(email);
                 addEmail(email)
                 setemail("")
+                
               }}>
                 Connect With Us
               </button>

@@ -8,6 +8,7 @@ import NormalCard from "@/Components/Cards/contact_card";
 import { useState } from "react";
 import { IoCallOutline } from "react-icons/io5";
 import { CiMail } from "react-icons/ci";
+import toast from "react-hot-toast";
 
 export default function Screen1({content1 = "",content2 = "",form = "",content3 = "",content4 = "",content5 = "",content6 = "",}) {
   const [name, setname] = useState();
@@ -50,6 +51,10 @@ export default function Screen1({content1 = "",content2 = "",form = "",content3 
       },
       body: JSON.stringify({name,email,number,whereuhear,service,message}),
     })
+
+    if(response.ok) {
+      toast.success(`We've received your message.\nCheck you email for a confirmation and further details`)
+    }
   
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
